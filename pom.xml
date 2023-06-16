@@ -96,14 +96,14 @@
 	<distributionManagement>
 	    <repository>
 	      <id>nexus</id>
-	      <name>ACADA Learning Releases Nexus Repository</name>
-	      <url>http://172.31.27.56:8081/repository/rbc-release/</url>
+	      <name>Ezra Releases Nexus Repository</name>
+	      <url>http://http://172.31.25.184:8081/repository/paypal-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>ACADA Learning Snapshot Nexus Repository </name>
-	      <url>http://172.31.27.56:8081/repository/rbc-snapshot/</url>
+	      <name>Ezra Snapshot Nexus Repository </name>
+	      <url>http://http://172.31.25.184:8081/repository/paypal-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
