@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>4.0.0-RELEASE</version>
+	<version>1.0.0-RELEASE</version>
 	
 	<name>maven-web-application</name>
 
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Ezra Releases Nexus Repository</name>
-	      <url>http://172.31.25.184:8081/repository/paypal-release/</url>
+	      <url>http://172.31.29.102:8081/nexus/content/repositories/docker-pipeline-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Ezra Snapshot Nexus Repository </name>
-	      <url>http://172.31.25.184:8081/repository/paypal-snapshot/</url>
+	      <url>http://172.31.29.102:8081/nexus/content/repositories/docker-pipeline-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
