@@ -95,14 +95,14 @@
 	
 	<distributionManagement>
 	    <repository>
-	      <id>nexus</id>
-	      <name>Ezra Releases Nexus Repository</name>
+	      <id>docker-pipeline-release</id>
+	      <name>docker-pipeline-release</name>
 	      <url>http://172.31.29.102:8081/nexus/content/repositories/docker-pipeline-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>nexus</id>
-	      <name>Ezra Snapshot Nexus Repository </name>
+	      <id>docker-pipeline-snapshot</id>
+	      <name>docker-pipeline-snapshot</name>
 	      <url>http://172.31.29.102:8081/nexus/content/repositories/docker-pipeline-snapshot/</url>
 	    </snapshotRepository>
 	    
