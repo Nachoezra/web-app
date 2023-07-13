@@ -58,7 +58,7 @@ pipeline {
             }
         }
     }
-}
+
     /*
     stage('deploy'){
   sshagent(['tomcat']) {
