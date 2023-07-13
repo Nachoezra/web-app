@@ -1,2 +1,4 @@
-FROM tomcat:8.0.20-jre8
-COPY /var/jenkins_home/workspace/mydockerpipeline/target/*war /usr/local/tomcat/webapps
+FROM openjdk:8
+EXPOSE 8080
+COPY target/*war /usr/local/tomcat/webapps
+ENTRYPOINT ["java","-war","web-app.war"]
