@@ -3,13 +3,7 @@ pipeline {
     tools {
         maven 'Maven 3.8.6'
     }
-    stages {
-        stage ('Cloning from Github'){
-            steps {
-                echo 'Cloning from Github'
-                git 'https://github.com/Nachoezra/web-app.git'
-                echo 'Cloning done'
-            }
+   
         }
         stage('Build with Maven'){
             steps{
