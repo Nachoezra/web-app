@@ -34,7 +34,9 @@ pipeline {
         }
         stage('Building Docker Image'){
             steps{
-                   sh 'docker build -t nachoezra/my-app .' 
+                script{
+                    sh 'docker build -t nachoezra/my-app .' 
+                }
             }
         }
         stage('Push Docker Image to Dockerhub'){
