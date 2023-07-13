@@ -1,4 +1,4 @@
-FROM openjdk:8
-EXPOSE 8080
-ADD target/*war /usr/local/tomcat/webapps
-ENTRYPOINT ["java","-war","web-app.war"]
+FROM jenkins/jenkins:lts
+USER root
+RUN curl -sSL https://get.docker.com/|sh
+USER jenkins
