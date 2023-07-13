@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:lts
+FROM jenkins/jenkins:alpine
 USER root
 RUN curl -sSL https://get.docker.com/|sh
 USER jenkins
