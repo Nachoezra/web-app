@@ -95,13 +95,13 @@
 	
 	<distributionManagement>
 	    <repository>
-	      <id>docker-pipeline-release</id>
+	      <id>nexus</id>
 	      <name>docker-pipeline-release</name>
 	      <url>http://18.191.136.126:8081/nexus/content/repositories/docker-pipeline-release</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>docker-pipeline-snapshot</id>
+	      <id>nexus</id>
 	      <name>docker-pipeline-snapshot</name>
 	      <url>http://18.191.136.126:8081/nexus/content/repositories/docker-pipeline-snapshot</url>
 	    </snapshotRepository>
