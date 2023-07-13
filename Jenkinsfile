@@ -14,7 +14,8 @@ pipeline {
         stage('Build with Maven'){
             steps{
                 echo 'Building with Maven'
-                sh 'mvn package'
+                checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'Github', url: 'https://github.com/Nachoezra/web-app.git']])
+                sh 'mvn clean package'
                 echo 'Building done'
             }
         }
