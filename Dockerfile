@@ -1,2 +1,3 @@
 FROM tomcat:8.0.20-jre8
-COPY target/*.war /usr/local/tomcat/webapps
+RUN 
+COPY /var/jenkins_home/workspace/mydockerpipeline/target/*war /usr/local/tomcat/webapps
