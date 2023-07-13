@@ -3,8 +3,8 @@ pipeline {
     tools {
         maven 'Maven 3.8.6'
     }
-   
-        }
+    stages {
+        
         stage('Build with Maven'){
             steps{
                 echo 'Building with Maven'
