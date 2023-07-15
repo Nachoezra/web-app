@@ -27,44 +27,39 @@ pipeline {
                 echo 'Uploading done'
             }
         }
-        stage('Building Docker Image'){
+        stage('Build Docker Image'){
             steps{
-                script{
-                    sh 'docker build -t nachoezra/my-app .' 
-                }
+                echo 'Building Docker Image'
+                sh 'docker rm -f my-app'
+                sh 'docker rmi nachoezra/my-web-app:latest'
+                sh 'docker build -t nachoezra/my-web-app:latest .'
+                echo 'Docker Image built'
             }
         }
         stage('Push Docker Image to Dockerhub'){
             steps{
-                script{
-                    withCredentials([string(credentialsId: 'Dockerhub_cred', variable: 'dockerhubpwd')]) {
+                withCredentials([string(credentialsId: 'nachoezra', variable: 'dockerhubpwd')]) {
                     sh 'docker login -u nachoezra -p ${dockerhubpwd}'  
-                    sh 'docker push nachoezra/'
-                    }
+                    sh 'docker push nachoezra/my-web-app:latest'
                 }
             }
         }
         stage('Deploy to Tomcat'){
             steps{
-                echo 'Deploying to Tomcat'
-                deploy adapters: [tomcat9(credentialsId: 'Tomcat_new', path: '', url: 'http://18.191.136.126:1005')], contextPath: null, onFailure: false, war: 'target/*war'
-                echo 'Deployment successful'
-                
+                echo 'Running a Tomcat Container off my-web-app base image'
+                sh 'docker run --name my-app -d -p 1000:8080 nachoezra/my-web-app:latest'
+                echo 'Deployment done'
             }
         }
     }
 
     /*
-    stage('deploy'){
-  sshagent(['tomcat']) {
-  sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@172.31.15.31:/opt/tomcat9/webapps/"
-}
-}
-stage('email'){
-emailext body: '''Build is over
-
-Acada
-437212483''', recipientProviders: [developers(), requestor()], subject: 'Build', to: 'tdapp@gmail.com'
-}
+        stage('deploy'){
+            sshagent(['tomcat']) {
+                sh "scp -o StrictHostKeyChecking=no target/*war ec2-user@172.31.15.31:/opt/tomcat9/webapps/"
+            }
+        }
+       
     */
+
 }
