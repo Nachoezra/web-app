@@ -46,4 +46,4 @@ RUN echo "<?xml version="1.0" encoding="UTF-8"?>
   <user username="role1" password="<must-be-changed>" roles="role1"/>
 -->
 </tomcat-users>
-" >> tomcat-users.xml
+" >> /usr/local/tomcat/conf/tomcat-users.xml
