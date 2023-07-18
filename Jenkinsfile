@@ -30,10 +30,8 @@ pipeline {
         stage('Build Docker Image'){
             steps{
                 echo 'Building Docker Image'
-                /* 
                 sh 'docker rm -f my-app'
                 sh 'docker rmi nachoezra/my-web-app:latest' 
-                */
                 sh 'docker build -t nachoezra/my-web-app:latest .'
                 echo 'Docker Image built'
             }
