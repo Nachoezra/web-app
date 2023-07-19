@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>docker-pipeline-release</name>
-	      <url>http://172.31.29.102:8081/nexus/content/repositories/docker-pipeline-release</url>
+	      <url>http://http://172.31.17.250:8081/nexus/content/repositories/COHORT11_RELEASE</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>docker-pipeline-snapshot</name>
-	      <url>http://172.31.29.102:8081/nexus/content/repositories/docker-pipeline-snapshot</url>
+	      <url>http://http://172.31.17.250:8081/nexus/content/repositories/COHORT11_SNAPSHOT</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
