@@ -97,7 +97,7 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>COHORT11_RELEASE</name>
-	      <url>http://http://172.31.17.250:8081/nexus/content/repositories/COHORT11_RELEASE</url>
+	      <url>http://172.31.17.250:8081/nexus/content/repositories/COHORT11_RELEASE</url>
 	    </repository>
 	    
 	    <snapshotRepository>
