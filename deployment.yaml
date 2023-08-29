@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: webapp
   namespace: dev
 spec:
   selector:
     matchLabels:
-      app: myapp
+      app: webapp
   replicas: 6
   template:
     metadata:
-      name: myapp
+      name: webapp
       labels:
-        app: myapp
+        app: webapp
     spec:
       containers:
-      - name: myapp
-        image: acadalearning/spring-boot-mongo
+      - name: webapp
+        image: nachoezra/my-web-app:latest
         ports:
         - containerPort: 8080
 
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-app
+  name: webapp
 spec:
   selector:
-    app: myapp
+    app: webapp
   ports:
   - protocol: TCP
     port: 80
     targetPort: 8080
-  type: ClusterIP
+  type: NodePort
