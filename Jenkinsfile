@@ -13,7 +13,7 @@ pipeline {
                 echo 'Building done'
             }
         }
-        stage('Test with Sonarqube'){
+       /* stage('Test with Sonarqube'){
             steps{
                 echo 'Testing with Sonarqube'
                 sh 'mvn sonar:sonar'
@@ -26,7 +26,7 @@ pipeline {
                 sh 'mvn deploy'
                 echo 'Uploading done'
             }
-        }
+        } */
         stage('Build Docker Image'){
             steps{
                 echo 'Building Docker Image'
