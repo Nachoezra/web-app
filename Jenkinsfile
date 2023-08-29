@@ -39,7 +39,7 @@ pipeline {
         stage('Push Docker Image to Dockerhub'){
             steps{
                 withCredentials([string(credentialsId: 'nachoezra', variable: 'Dockerhubpwd')]) {
-                    sh 'docker login -u nachoezra -p ${dockerhubpwd}'  
+                    sh 'docker login -u nachoezra -p ${Dockerhubpwd}'  
                     sh 'docker push nachoezra/my-web-app:latest'
                 }
             }
