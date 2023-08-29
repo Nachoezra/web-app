@@ -44,10 +44,10 @@ pipeline {
                 }
             }
         }
-        stage('Deploy to Tomcat'){
+        stage('Deploy to Kubernetes'){
             steps{
-                echo 'Running a Tomcat Container off my-web-app base image'
-                sh 'docker run --name my-app -d -p 1000:8080 nachoezra/my-web-app:latest'
+                echo 'deploying to Kubernetes'
+                sh 'kubectl apply -f deployment'
                 echo 'Deployment done'
             }
         }
